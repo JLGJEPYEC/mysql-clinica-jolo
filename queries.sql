@@ -1,0 +1,12 @@
+select nombres , apellidos , dni from medicos;
+select nombres , apellidos , dni from pacientes;
+SELECT concat(m.apellidos,' ', m.nombres)as medico ,e.nombre as especialidad FROM medicos mjoin especialidades e on m.especialidad=e.id;
+select DIA_TURNO , HORA_INICIO , HORA_FIN , cuposfrom turnos;
+SELECT concat(m.apellidos,' ', m.nombres)as MEDICO ,concat(t.DIA_TURNO , '  de  ',t.HORA_INICIO, '  a  ',t.HORA_FIN) as HORARIOS  FROM medicos mjoin turnos t on m.turno=t.id;
+SELECT  c.ID , p.DNI,concat(p.apellidos,'  ', p.nombres)as PACIENTE,concat(m.apellidos,'  ', m.nombres)as MEDICOS ,c.FECHA_CITA as FECHA_PROGRAMADAFROM citas cjoin pacientes p on c.PACIENTE=p.DNIjoin medicos M on c.medico=m.DNI;
+select nombres , apellidos , dni from medicos;
+select nombres , apellidos , dni from pacientes;
+SELECT concat(m.apellidos,' ', m.nombres)as medico ,e.nombre as especialidad FROM medicos mjoin especialidades e on m.especialidad=e.id;
+select DIA_TURNO , HORA_INICIO , HORA_FIN , cuposfrom turnos;
+SELECT concat(m.apellidos,' ', m.nombres)as MEDICO ,concat(t.DIA_TURNO , '  de  ',t.HORA_INICIO, '  a  ',t.HORA_FIN) as HORARIOS  FROM medicos mjoin turnos t on m.turno=t.id;
+SELECT  c.ID , p.DNI,concat(p.apellidos,'  ', p.nombres)as PACIENTE,concat(m.apellidos,'  ', m.nombres)as MEDICOS ,c.FECHA_CITA as FECHA_PROGRAMADAFROM citas cjoin pacientes p on c.PACIENTE=p.DNIjoin medicos M on c.medico=m.DNI;
